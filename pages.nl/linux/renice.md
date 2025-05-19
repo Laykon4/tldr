@@ -2,17 +2,21 @@
 
 > Verander de scheduleringsprioriteit/niceness van lopende processen.
 > Niceness waarden variëren van -20 (meest gunstig voor het proces) tot 19 (minst gunstig voor het proces).
-> Zie ook: `nice`.
+> Bekijk ook: `nice`.
 > Meer informatie: <https://manned.org/renice>.
 
-- Stel de absolute prioriteit van een lopend [p]roces in:
+- Stel de absolute prioriteit van een lopend proces in:
 
-`renice {{+3}} -p {{pid}}`
+`renice --priority {{3}} {{[-p|--pid]}} {{pid}}`
 
-- Verhoog/verlaag de prioriteit van alle processen die eigendom zijn van een [g]ebruiker:
+- Verhoog de prioriteit van een lopend proces:
 
-`renice --relative {{-4}} -u {{uid|user}}`
+`sudo renice --relative {{-4}} {{[-p|--pid]}} {{pid}}`
 
-- Stel de prioriteit in van alle processen die behoren tot een proces[g]roep:
+- Verlaag de prioriteit van alle processen die eigendom zijn van een gebruiker:
 
-`renice --absolute {{5}} -g {{proces_groep}}`
+`renice --relative {{4}} {{[-p|--pid]}} {{pid}}`
+
+- Stel de prioriteit in van alle processen die behoren tot een procesgroep:
+
+`sudo renice {{-5}} {{[-g|--pgrp]}} {{process_group}}`

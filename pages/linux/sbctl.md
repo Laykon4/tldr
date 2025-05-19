@@ -1,7 +1,7 @@
 # sbctl
 
 > A user-friendly secure boot key manager.
-> Note: not enrolling Microsoft's certificates can brick your system. See <https://github.com/Foxboron/sbctl/wiki/FAQ#option-rom>.
+> Note: Not enrolling Microsoft's certificates can brick your system. See <https://github.com/Foxboron/sbctl/wiki/FAQ#option-rom>.
 > More information: <https://github.com/Foxboron/sbctl#usage>.
 
 - Show the current secure boot status:
@@ -22,7 +22,7 @@
 
 - Sign an EFI binary with the created key and save the file to the database:
 
-`sbctl sign {{-s|--save}} {{path/to/efi_binary}}`
+`sbctl sign {{[-s|--save]}} {{path/to/efi_binary}}`
 
 - Re-sign all the saved files:
 

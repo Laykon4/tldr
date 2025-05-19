@@ -1,7 +1,7 @@
 # rename
 
 > Rename multiple files.
-> Note: this page refers to the command from the `util-linux` package.
+> Note: This page refers to the command from the `util-linux` package.
 > For the Perl version, see `file-rename` or `perl-rename`.
 > Warning: This command has no safeguards and will overwrite files without prompting.
 > More information: <https://manned.org/rename>.
@@ -12,11 +12,11 @@
 
 - Dry-run - display which renames would occur without performing them:
 
-`rename -vn {{foo}} {{bar}} {{*}}`
+`rename {{[-vn|--verbose --no-act]}} {{foo}} {{bar}} {{*}}`
 
 - Do not overwrite existing files:
 
-`rename -o {{foo}} {{bar}} {{*}}`
+`rename {{[-o|--no-overwrite]}} {{foo}} {{bar}} {{*}}`
 
 - Change file extensions:
 

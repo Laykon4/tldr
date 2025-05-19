@@ -14,8 +14,12 @@
 
 - Delete all unused images (not just those without a tag):
 
-`docker image prune --all`
+`docker image prune {{[-a|--all]}}`
 
 - Show the history of a local Docker image:
 
 `docker image history {{image}}`
+
+- View documentation for `docker image rm`:
+
+`tldr docker rmi`
